@@ -7,11 +7,8 @@
 
 import Foundation
 
-public protocol ResponseType: Decodable {
-    
-    associatedtype DataType: Decodable
-    
-    var code: Int { get }
-    var message: String? { get }
-    var data: DataType { get }
+public struct ResponseType<Response: Decodable>: Decodable {
+    let status: String?
+    let message: String?
+    let data: Response?
 }

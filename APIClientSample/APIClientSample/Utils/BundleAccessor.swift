@@ -8,7 +8,7 @@
 import Foundation
 
 final class BundleAccess {
-    static var APIKey: String { accessBundle(withKey: "GoogleAPIKey") }
+    static let baseURL = accessBundle(withKey: "BaseURL")
     
     private static func accessBundle(withKey key: String) -> String {
         Bundle.main.object(forInfoDictionaryKey: key) as! String
