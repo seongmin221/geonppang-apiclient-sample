@@ -12,7 +12,7 @@ struct SignInRequest: RequestType {
     typealias ReqDTO = SignInReqDTO
     typealias ResDTO = SignInResDTO
     
-    var method: HTTPMethod { .get }
+    var method: HTTPMethod { .post }
     var path: String? = "/login"
     var queries: [String : String]? = nil
     var headers: [String : String]? = nil

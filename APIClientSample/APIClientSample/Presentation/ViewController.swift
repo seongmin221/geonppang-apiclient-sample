@@ -13,24 +13,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let apiclient = APIClient()
-        let request = SignInRequest()
-        var cancelBag: Set<AnyCancellable> = []
+        let client = BestBakeryListClient()
+        let request = BestBakeryListRequest()
         
-        URLSession.shared.dataTask(with: apiclient.createRequest(with: request)) { data, response, error in
-            dump(response)
+        Task { 
+            do {
+                let request = try await client.send(request)
+                dump(request)
+            } catch {
+                print("Error")
+            }
         }
-        .resume()
         
-//        apiclient.send(request)
-//            .sink(receiveCompletion: { completion in
-//                print("Completion received: \(completion)")
-//            }, receiveValue: { response in
-//                dump(response)
-//            })
-//            .store(in: &cancelBag)
     }
 
 
 }
-

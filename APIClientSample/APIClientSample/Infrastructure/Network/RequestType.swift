@@ -13,6 +13,11 @@ public protocol RequestType: Encodable {
     associatedtype ResDTO: Decodable
     
     /// 실제로 사용하는 HTTP Method만 정의 - Get, Post, Delete
+    ///
+    /// - Request의 HTTP Method:
+    /// 현재는 GET, POST, DELETE만 사용하기 때문에 세 가지만 설정
+    ///
+    /// - computed property로 한 이유는 encodable에 걸리지 않기 때문
     var method: HTTPMethod { get }
     /// Base URL 뒤에 붙는 URL Path
     var path: String? { get set }
@@ -24,3 +29,42 @@ public protocol RequestType: Encodable {
     var body: ReqDTO? { get set }
 }
 
+private extension RequestType {
+    var baseURLString: String { BundleAccess.baseURL }
+    
+    func toQueryItem(_ query: (key: String, value: String)) -> URLQueryItem {
+        return .init(name: query.key, value: query.value)
+    }
+}
+
+extension RequestType {
+    func toURLRequest() -> URLRequest {
+        
+        // Creating URL
+        guard var requestURL: URL = .init(string: baseURLString) else {
+            fatalError("base url access failed")
+        }
+        
+        if let path {
+            requestURL.append(path: path)
+        }
+        
+        if let queries {
+            requestURL.append(queryItems: queries.map(toQueryItem(_:)))
+        }
+        
+        // Creating Request
+        var request: URLRequest = .init(url: requestURL)
+        request.httpMethod = self.method.rawValue
+        
+        if let headers {
+            headers.forEach { key, value in request.addValue(value, forHTTPHeaderField: key) }
+        }
+        
+        if let body {
+            request.httpBody = try? JSONEncoder().encode(body)
+        }
+        
+        return request
+    }
+}
