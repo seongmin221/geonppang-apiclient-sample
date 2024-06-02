@@ -50,7 +50,7 @@ extension RequestType {
         }
         
         if let queries {
-            requestURL.append(queryItems: queries.map(toQueryItem(_:)))
+            requestURL.append(queryItems: queries.map(toQueryItem))
         }
         
         // Creating Request
@@ -63,6 +63,7 @@ extension RequestType {
         
         if let body {
             request.httpBody = try? JSONEncoder().encode(body)
+            // TODO: NetworkError.encodingFailed 처리
         }
         
         return request
