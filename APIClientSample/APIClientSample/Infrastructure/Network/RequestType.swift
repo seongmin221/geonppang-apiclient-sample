@@ -30,6 +30,7 @@ public protocol RequestType: Encodable {
 }
 
 private extension RequestType {
+    // FIXME: need to find different way to access bundle
     var baseURLString: String { BundleAccess.baseURL }
     
     func toQueryItem(_ query: (key: String, value: String)) -> URLQueryItem {
@@ -38,6 +39,7 @@ private extension RequestType {
 }
 
 extension RequestType {
+    /// converting `RequestType` to `URLRequest`
     func toURLRequest() -> URLRequest {
         
         // Creating URL

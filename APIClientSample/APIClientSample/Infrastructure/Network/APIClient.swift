@@ -6,32 +6,36 @@
 //
 
 import Foundation
-import Combine
 
 public protocol APIClient {
-    associatedtype Request: RequestType
+//    associatedtype Request: RequestType
     
-    func send(
+    func send<Request: RequestType>(
         _ request: Request
-    ) async throws -> Request.ResDTO
+    ) async throws -> Data
 }
 
 public extension APIClient {
-    func send(
+    func send<Request: RequestType>(
         _ request: Request
     ) async throws -> Data {
+        /// URLSession Configuration
         let configuration = URLSessionConfiguration.default
         let urlSession = URLSession.init(configuration: configuration)
+        
+        /// Converting `request` to `URLRequest`
         let urlRequest = request.toURLRequest()
         
+        /// Asynchronously requesting data
         let (data, urlResponse) = try await urlSession.data(for: urlRequest)
         
+        /// Returns data if possible or throws specified error
         guard let httpResponse = urlResponse as? HTTPURLResponse else {
-            throw GBNetworkError.unknownFailure(description: "failed when converting urlResponse to httpResponse")
+            throw GBNetworkError.unknownFailure(description: "failed to convert urlResponse to httpResponse")
         }
         
         switch httpResponse.statusCode {
-        case 200..<300: 
+        case 200..<300:
             return data
         case 400..<500:
             throw GBNetworkError.responseFailure(.clientError(httpResponse))

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E12AE6D2C0C3FE80035C49C /* SampleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E12AE6C2C0C3FE80035C49C /* SampleRepository.swift */; };
 		3E6E415D2C0731CE005C612F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E415C2C0731CE005C612F /* NetworkError.swift */; };
 		3E6E415F2C09F9BA005C612F /* BestBakeryListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E415E2C09F9BA005C612F /* BestBakeryListRequest.swift */; };
 		3E6E41612C09FA06005C612F /* BestBakeryListResDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6E41602C09FA06005C612F /* BestBakeryListResDTO.swift */; };
@@ -27,6 +28,7 @@
 		3EA326B72BF4E3120033927D /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA326B62BF4E3120033927D /* SignInRequest.swift */; };
 		3EA326B92BF4E6560033927D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA326B82BF4E6560033927D /* APIClient.swift */; };
 		3EBECCD92C0ABC8300A12240 /* APIRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBECCD82C0ABC8300A12240 /* APIRetrier.swift */; };
+		3ECB52822C0D610F00B685A1 /* BestBakery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB52812C0D610F00B685A1 /* BestBakery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E12AE6C2C0C3FE80035C49C /* SampleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRepository.swift; sourceTree = "<group>"; };
 		3E6E415C2C0731CE005C612F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		3E6E415E2C09F9BA005C612F /* BestBakeryListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestBakeryListRequest.swift; sourceTree = "<group>"; };
 		3E6E41602C09FA06005C612F /* BestBakeryListResDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestBakeryListResDTO.swift; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 		3EA326B62BF4E3120033927D /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		3EA326B82BF4E6560033927D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		3EBECCD82C0ABC8300A12240 /* APIRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRetrier.swift; sourceTree = "<group>"; };
+		3ECB52812C0D610F00B685A1 /* BestBakery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestBakery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 			children = (
 				3EA326972BF4CBF70033927D /* Application */,
 				3EA326A22BF4D16D0033927D /* Presentation */,
+				3ECB527F2C0D60DB00B685A1 /* Domain */,
 				3EA326992BF4CC470033927D /* Data */,
 				3EA3269C2BF4D1250033927D /* Infrastructure */,
 				3EA326982BF4CC000033927D /* Resource */,
@@ -211,6 +216,7 @@
 		3EA326A32BF4D18F0033927D /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				3E12AE6C2C0C3FE80035C49C /* SampleRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -256,6 +262,22 @@
 				3E6E415E2C09F9BA005C612F /* BestBakeryListRequest.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		3ECB527F2C0D60DB00B685A1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3ECB52802C0D60E600B685A1 /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3ECB52802C0D60E600B685A1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3ECB52812C0D610F00B685A1 /* BestBakery.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +413,7 @@
 				3EA3269B2BF4CC530033927D /* RequestType.swift in Sources */,
 				3EA3266C2BF4CBE40033927D /* ViewController.swift in Sources */,
 				3E6E415F2C09F9BA005C612F /* BestBakeryListRequest.swift in Sources */,
+				3E12AE6D2C0C3FE80035C49C /* SampleRepository.swift in Sources */,
 				3EA326B52BF4E20D0033927D /* SignInResDTO.swift in Sources */,
 				3E6E41612C09FA06005C612F /* BestBakeryListResDTO.swift in Sources */,
 				3EA326B72BF4E3120033927D /* SignInRequest.swift in Sources */,
@@ -401,6 +424,7 @@
 				3EA3266A2BF4CBE40033927D /* SceneDelegate.swift in Sources */,
 				3E6E415D2C0731CE005C612F /* NetworkError.swift in Sources */,
 				3EBECCD92C0ABC8300A12240 /* APIRetrier.swift in Sources */,
+				3ECB52822C0D610F00B685A1 /* BestBakery.swift in Sources */,
 				3EA326AA2BF4D4670033927D /* BundleAccessor.swift in Sources */,
 				3EA3269F2BF4D1430033927D /* ResponseType.swift in Sources */,
 			);

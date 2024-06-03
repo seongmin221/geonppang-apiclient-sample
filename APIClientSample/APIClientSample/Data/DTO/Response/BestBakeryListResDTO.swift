@@ -10,11 +10,11 @@ import Foundation
 struct BestBakeryListResDTO: Decodable {
     let code: Int
     let message: String
-    let data: [Bakery]
+    let data: [BestBakery]
 }
 
 // MARK: - Datum
-struct Bakery: Codable {
+struct BestBakery: Decodable {
     let bakeryID: Int
     let bakeryName: String
     let bakeryPicture: String
