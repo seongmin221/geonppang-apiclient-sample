@@ -18,6 +18,8 @@
 		3EA3269B2BF4CC530033927D /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA3269A2BF4CC530033927D /* RequestType.swift */; };
 		3EA3269F2BF4D1430033927D /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA3269E2BF4D1430033927D /* ResponseType.swift */; };
 		3EA326A12BF4D1550033927D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA326A02BF4D1550033927D /* HTTPMethod.swift */; };
+		3ECB52882C0D9CC100B685A1 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB52872C0D9CC000B685A1 /* HTTPTask.swift */; };
+		3ECB528B2C0DA00E00B685A1 /* BundleAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB528A2C0DA00E00B685A1 /* BundleAccessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		3EA3269A2BF4CC530033927D /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		3EA3269E2BF4D1430033927D /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
 		3EA326A02BF4D1550033927D /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		3ECB52872C0D9CC000B685A1 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		3ECB528A2C0DA00E00B685A1 /* BundleAccessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleAccessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +107,9 @@
 		3EA326662BF4CBE40033927D /* APIClientSample */ = {
 			isa = PBXGroup;
 			children = (
+				3ECB52892C0DA00600B685A1 /* Utils */,
 				3EA326972BF4CBF70033927D /* Application */,
 				3EA326A22BF4D16D0033927D /* Presentation */,
-				3EA326992BF4CC470033927D /* Data */,
 				3EA3269C2BF4D1250033927D /* Infrastructure */,
 				3EA326982BF4CC000033927D /* Resource */,
 			);
@@ -148,15 +152,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		3EA326992BF4CC470033927D /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				3EA326A42BF4D1990033927D /* DTO */,
-				3EA326A32BF4D18F0033927D /* Repository */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		3EA3269C2BF4D1250033927D /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				3EA326A02BF4D1550033927D /* HTTPMethod.swift */,
+				3ECB52872C0D9CC000B685A1 /* HTTPTask.swift */,
 				3EA3269A2BF4CC530033927D /* RequestType.swift */,
 				3EA3269E2BF4D1430033927D /* ResponseType.swift */,
 			);
@@ -183,34 +179,12 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		3EA326A32BF4D18F0033927D /* Repository */ = {
+		3ECB52892C0DA00600B685A1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3ECB528A2C0DA00E00B685A1 /* BundleAccessor.swift */,
 			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		3EA326A42BF4D1990033927D /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				3EA326A52BF4D2340033927D /* Request */,
-				3EA326A62BF4D2370033927D /* Response */,
-			);
-			path = DTO;
-			sourceTree = "<group>";
-		};
-		3EA326A52BF4D2340033927D /* Request */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
-		3EA326A62BF4D2370033927D /* Response */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Response;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,9 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ECB52882C0D9CC100B685A1 /* HTTPTask.swift in Sources */,
 				3EA3269B2BF4CC530033927D /* RequestType.swift in Sources */,
 				3EA3266C2BF4CBE40033927D /* ViewController.swift in Sources */,
 				3EA326A12BF4D1550033927D /* HTTPMethod.swift in Sources */,
+				3ECB528B2C0DA00E00B685A1 /* BundleAccessor.swift in Sources */,
 				3EA326682BF4CBE40033927D /* AppDelegate.swift in Sources */,
 				3EA3266A2BF4CBE40033927D /* SceneDelegate.swift in Sources */,
 				3EA3269F2BF4D1430033927D /* ResponseType.swift in Sources */,
