@@ -9,10 +9,8 @@ import Foundation
 
 public protocol RequestType: Encodable {
     
-    associatedtype Response: ResponseType
-    
     /// Base URL 뒤에 붙는 URL Path
-    var path: String { get set }
+    var path: String { get }
     
     /// 실제로 사용하는 HTTP Method만 정의 - Get, Post, Delete
     ///
@@ -27,12 +25,31 @@ public protocol RequestType: Encodable {
     /// - `.requestPlain` - 추가적인 body 또는 query 없이 요청
     /// - `.requestQuery(_ [String: Any])` - url path 뒤에 query 추가하여 요청
     /// - `.requestEncodable(_ : Encodable)` - encodable 한 body와 함께 요청
-    var task: HTTPTask { get set }
+    var task: HTTPTask { get }
     
     /// Request 마다 필요한 Header Fields
-    var header: [String: Any] { get set }
+    var headers: HTTPHeaders { get }
 }
 
 extension RequestType {
     private var baseURL: String { BundleAccess.baseURL }
+    
+    func toURLRequest() throws -> URLRequest {
+        guard let url = URL(string: baseURL + path) else {
+            throw GBNetworkError.urlCreationFailure(urlString: baseURL + path)
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = self.method.rawValue
+        urlRequest.allHTTPHeaderFields = self.headers.fields
+        
+        switch task {
+        case .requestPlain:
+            return urlRequest
+        case let .requestQuery(queries):
+            return try urlRequest.encode(queries: queries)
+        case let .requestEncodable(body):
+            return try urlRequest.encode(body: body)
+        }
+    }
 }
