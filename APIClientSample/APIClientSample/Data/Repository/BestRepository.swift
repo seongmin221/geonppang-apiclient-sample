@@ -1,5 +1,5 @@
 //
-//  SampleRepository.swift
+//  BestRepository.swift
 //  APIClientSample
 //
 //  Created by 이성민 on 6/3/24.
@@ -13,14 +13,16 @@ protocol BestRepository {
 }
 
 final class BestRepositoryImpl: BestRepository {
-    private let apiClient: APIClientType
+    private let apiClient: APIClient<BestEndpoint> = .init()
     
     func getBestBakeries() async throws -> Response<BestBakeryDTO> {
-        <#code#>
+        let response = try await apiClient.send(.getBestBakeries)
+        return try response.decode()
     }
     
     func getBestReviews() async throws -> Response<BestReviewDTO> {
-        <#code#>
+        let response = try await apiClient.send(.getBestReviews)
+        return try response.decode()
     }
     
     
