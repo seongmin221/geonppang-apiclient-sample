@@ -8,7 +8,7 @@
 import Foundation
 
 final class BundleAccess {
-    static let baseURL = accessBundle(withKey: "BaseURL")
+    static let baseURL = accessBundle(withKey: "BASE_URL")
     
     private static func accessBundle(withKey key: String) -> String {
         Bundle.main.object(forInfoDictionaryKey: key) as! String
