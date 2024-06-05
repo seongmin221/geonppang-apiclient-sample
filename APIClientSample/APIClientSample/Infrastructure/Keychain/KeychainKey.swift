@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+public enum KeychainKey: String {
+    case accessToken
+    case refreshToken
+    case appleRefreshToken
+    case socialAuthCode
+    case userRole
+    case userEmail
+    case socialType
+}
+
+extension KeychainKey {
+    var createQuery: NSDictionary {
+        [
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrAccount: self.rawValue,
+        ]
+    }
+}
