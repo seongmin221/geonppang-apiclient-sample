@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum GBKeychainError: Error {
+enum KeychainError: Error {
     case duplicateItem
     case invalidID
     case decodingFailure
