@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BestBakeryDTO: Codable {
+struct BestBakeryDTO: Decodable {
     let bakeryID: Int
     let bakeryName: String
     let bakeryPicture: String

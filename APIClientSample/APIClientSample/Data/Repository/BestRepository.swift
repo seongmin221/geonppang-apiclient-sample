@@ -13,7 +13,13 @@ protocol BestRepository {
 }
 
 final class BestRepositoryImpl: BestRepository {
+    
     private let apiClient: APIClient<BestEndpoint> = .init()
+    private let keychainService: KeychainServiceType
+    
+    init(keychainService: KeychainServiceType) {
+        self.keychainService = keychainService
+    }
     
     func getBestBakeries() async throws -> Response<BestBakeryDTO> {
         let response = try await apiClient.send(.getBestBakeries)
@@ -24,6 +30,4 @@ final class BestRepositoryImpl: BestRepository {
         let response = try await apiClient.send(.getBestReviews)
         return try response.decode()
     }
-    
-    
 }
