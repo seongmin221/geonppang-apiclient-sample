@@ -7,6 +7,8 @@
 
 import Foundation
 
+import GBNetwork
+
 protocol BestRepository {
     func getBestBakeries() async throws -> Response<BestBakeryDTO>
     func getBestReviews() async throws -> Response<BestReviewDTO>
@@ -15,11 +17,7 @@ protocol BestRepository {
 final class BestRepositoryImpl: BestRepository {
     
     private let apiClient: APIClient<BestEndpoint> = .init()
-    private let keychainService: KeychainServiceType
-    
-    init(keychainService: KeychainServiceType) {
-        self.keychainService = keychainService
-    }
+    private let keychainService: KeychainService = .init()
     
     func getBestBakeries() async throws -> Response<BestBakeryDTO> {
         let response = try await apiClient.send(.getBestBakeries)

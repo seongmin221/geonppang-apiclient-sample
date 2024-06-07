@@ -12,15 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let apiclient = APIClient<BestEndpoint>()
-        Task {
-            do {
-                let data = try await apiclient.send(.getBestBakeries)
-                
-            } catch {
-                dump(error)
-            }
-        }
+        
     }
 
 

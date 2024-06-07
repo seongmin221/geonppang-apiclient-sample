@@ -7,12 +7,17 @@
 
 import Foundation
 
+import GBNetwork
+
 enum BestEndpoint {
     case getBestBakeries
     case getBestReviews
 }
 
 extension BestEndpoint: RequestType {
+    var baseURL: String {
+        return BundleAccess.baseURL
+    }
     
     var path: String {
         switch self {
@@ -35,7 +40,7 @@ extension BestEndpoint: RequestType {
         }
     }
     
-    var headers: HTTPHeaders {
+    var headers: HTTPHeader {
         switch self {
         case .getBestBakeries:
             return .init(headers: [])
