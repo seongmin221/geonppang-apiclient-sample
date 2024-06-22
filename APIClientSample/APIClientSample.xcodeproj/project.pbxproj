@@ -21,6 +21,10 @@
 		3E35C0552C1712F5007D399C /* BakeryOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35C0542C1712F5007D399C /* BakeryOverview.swift */; };
 		3E35C0572C171313007D399C /* Certifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35C0562C171313007D399C /* Certifications.swift */; };
 		3E35C0592C17133E007D399C /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35C0582C17133E007D399C /* Regions.swift */; };
+		3E3DEA0E2C26AA4100CA5999 /* BakeryListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DEA0D2C26AA4100CA5999 /* BakeryListDTO.swift */; };
+		3E3DEA122C26AA6000CA5999 /* BakeriesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DEA112C26AA6000CA5999 /* BakeriesEndpoint.swift */; };
+		3E3DEA142C26AB4F00CA5999 /* BakeriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DEA132C26AB4F00CA5999 /* BakeriesRepository.swift */; };
+		3E3DEA162C26AC3800CA5999 /* BakeryListRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DEA152C26AC3800CA5999 /* BakeryListRequestDTO.swift */; };
 		3EA326682BF4CBE40033927D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA326672BF4CBE40033927D /* AppDelegate.swift */; };
 		3EA3266A2BF4CBE40033927D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA326692BF4CBE40033927D /* SceneDelegate.swift */; };
 		3EA3266C2BF4CBE40033927D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA3266B2BF4CBE40033927D /* ViewController.swift */; };
@@ -93,6 +97,10 @@
 		3E35C0542C1712F5007D399C /* BakeryOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryOverview.swift; sourceTree = "<group>"; };
 		3E35C0562C171313007D399C /* Certifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certifications.swift; sourceTree = "<group>"; };
 		3E35C0582C17133E007D399C /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
+		3E3DEA0D2C26AA4100CA5999 /* BakeryListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryListDTO.swift; sourceTree = "<group>"; };
+		3E3DEA112C26AA6000CA5999 /* BakeriesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeriesEndpoint.swift; sourceTree = "<group>"; };
+		3E3DEA132C26AB4F00CA5999 /* BakeriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeriesRepository.swift; sourceTree = "<group>"; };
+		3E3DEA152C26AC3800CA5999 /* BakeryListRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryListRequestDTO.swift; sourceTree = "<group>"; };
 		3EA326642BF4CBE40033927D /* APIClientSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIClientSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA326672BF4CBE40033927D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EA326692BF4CBE40033927D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +156,7 @@
 		3E2EEDC62C0E11EF0044AD67 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				3E3DEA152C26AC3800CA5999 /* BakeryListRequestDTO.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -157,6 +166,7 @@
 			children = (
 				3E2EEDCA2C0E18F60044AD67 /* BestBakeryDTO.swift */,
 				3E2EEDCC2C0E197F0044AD67 /* BestReviewDTO.swift */,
+				3E3DEA0D2C26AA4100CA5999 /* BakeryListDTO.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -343,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				3ECB52922C0DC57B00B685A1 /* BestRepository.swift */,
+				3E3DEA132C26AB4F00CA5999 /* BakeriesRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -351,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				3E2EEDBD2C0DCAF40044AD67 /* BestEndpoint.swift */,
+				3E3DEA112C26AA6000CA5999 /* BakeriesEndpoint.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -512,7 +524,10 @@
 			files = (
 				3E2EEDBE2C0DCAF40044AD67 /* BestEndpoint.swift in Sources */,
 				3E35C0532C1712D7007D399C /* BestBakery.swift in Sources */,
+				3E3DEA122C26AA6000CA5999 /* BakeriesEndpoint.swift in Sources */,
 				3EA3266C2BF4CBE40033927D /* ViewController.swift in Sources */,
+				3E3DEA0E2C26AA4100CA5999 /* BakeryListDTO.swift in Sources */,
+				3E3DEA142C26AB4F00CA5999 /* BakeriesRepository.swift in Sources */,
 				3E2EEDCB2C0E18F60044AD67 /* BestBakeryDTO.swift in Sources */,
 				3ECB52932C0DC57B00B685A1 /* BestRepository.swift in Sources */,
 				3ECB528B2C0DA00E00B685A1 /* BundleAccessor.swift in Sources */,
@@ -525,6 +540,7 @@
 				3EA3266A2BF4CBE40033927D /* SceneDelegate.swift in Sources */,
 				3E35BF282C1093AE007D399C /* KeychainError.swift in Sources */,
 				3E35C0552C1712F5007D399C /* BakeryOverview.swift in Sources */,
+				3E3DEA162C26AC3800CA5999 /* BakeryListRequestDTO.swift in Sources */,
 				3E35BF222C0F2871007D399C /* KeychainService.swift in Sources */,
 				3E35C0482C12D9B4007D399C /* GBDomainError.swift in Sources */,
 			);

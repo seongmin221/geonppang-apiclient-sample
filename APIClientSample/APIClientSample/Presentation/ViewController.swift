@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let repository: BestRepository
+    let repository: BakeriesRepository
     
-    init(repository: BestRepository) {
+    init(repository: BakeriesRepository) {
         self.repository = repository
         super.init(nibName: nil, bundle: nil)
     }
@@ -25,7 +25,14 @@ class ViewController: UIViewController {
         
         Task {
             do {
-                let data = try await repository.getBestReviews()
+                let data = try await repository.getBakeryList(query: .init(
+                    sortingOption: .default,
+                    personalFilter: false,
+                    isHard: true,
+                    isDessert: false,
+                    isBrunch: false,
+                    pageNumber: 1
+                ))
                 dump(data)
             }
             catch {
