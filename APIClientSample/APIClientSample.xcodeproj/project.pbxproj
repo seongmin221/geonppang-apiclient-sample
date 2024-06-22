@@ -15,6 +15,12 @@
 		3E35BF282C1093AE007D399C /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35BF272C1093AE007D399C /* KeychainError.swift */; };
 		3E35C03E2C1216EF007D399C /* GBNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35C03A2C121645007D399C /* GBNetwork.framework */; };
 		3E35C03F2C1216EF007D399C /* GBNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35C03A2C121645007D399C /* GBNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E35C0452C12D967007D399C /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35C0442C12D967007D399C /* HomeUseCase.swift */; };
+		3E35C0482C12D9B4007D399C /* GBDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35C0472C12D9B4007D399C /* GBDomainError.swift */; };
+		3E35C0532C1712D7007D399C /* BestBakery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35C0522C1712D7007D399C /* BestBakery.swift */; };
+		3E35C0552C1712F5007D399C /* BakeryOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35C0542C1712F5007D399C /* BakeryOverview.swift */; };
+		3E35C0572C171313007D399C /* Certifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35C0562C171313007D399C /* Certifications.swift */; };
+		3E35C0592C17133E007D399C /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35C0582C17133E007D399C /* Regions.swift */; };
 		3EA326682BF4CBE40033927D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA326672BF4CBE40033927D /* AppDelegate.swift */; };
 		3EA3266A2BF4CBE40033927D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA326692BF4CBE40033927D /* SceneDelegate.swift */; };
 		3EA3266C2BF4CBE40033927D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA3266B2BF4CBE40033927D /* ViewController.swift */; };
@@ -81,6 +87,12 @@
 		3E35BF232C0F289D007D399C /* KeychainKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKey.swift; sourceTree = "<group>"; };
 		3E35BF272C1093AE007D399C /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
 		3E35C0342C121645007D399C /* GBNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBNetwork.xcodeproj; path = "../../../gbnetwork-framework/GBNetwork/GBNetwork.xcodeproj"; sourceTree = "<group>"; };
+		3E35C0442C12D967007D399C /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
+		3E35C0472C12D9B4007D399C /* GBDomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBDomainError.swift; sourceTree = "<group>"; };
+		3E35C0522C1712D7007D399C /* BestBakery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestBakery.swift; sourceTree = "<group>"; };
+		3E35C0542C1712F5007D399C /* BakeryOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryOverview.swift; sourceTree = "<group>"; };
+		3E35C0562C171313007D399C /* Certifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certifications.swift; sourceTree = "<group>"; };
+		3E35C0582C17133E007D399C /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
 		3EA326642BF4CBE40033927D /* APIClientSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIClientSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA326672BF4CBE40033927D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EA326692BF4CBE40033927D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				3E2EEDC92C0E18EF0044AD67 /* Entity */,
+				3E35C0462C12D9A0007D399C /* Error */,
+				3E35C0432C12D92A007D399C /* UseCase */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -160,6 +174,10 @@
 		3E2EEDC92C0E18EF0044AD67 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				3E35C0522C1712D7007D399C /* BestBakery.swift */,
+				3E35C0542C1712F5007D399C /* BakeryOverview.swift */,
+				3E35C0562C171313007D399C /* Certifications.swift */,
+				3E35C0582C17133E007D399C /* Regions.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -190,6 +208,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3E35C0432C12D92A007D399C /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				3E35C0442C12D967007D399C /* HomeUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		3E35C0462C12D9A0007D399C /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				3E35C0472C12D9B4007D399C /* GBDomainError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		3EA3265B2BF4CBE40033927D = {
 			isa = PBXGroup;
 			children = (
@@ -215,9 +249,9 @@
 		3EA326662BF4CBE40033927D /* APIClientSample */ = {
 			isa = PBXGroup;
 			children = (
-				3E2EEDC82C0E18ED0044AD67 /* Domain */,
 				3EA326972BF4CBF70033927D /* Application */,
 				3EA326A22BF4D16D0033927D /* Presentation */,
+				3E2EEDC82C0E18ED0044AD67 /* Domain */,
 				3ECB52902C0DC56E00B685A1 /* Data */,
 				3EA3269C2BF4D1250033927D /* Infrastructure */,
 				3ECB52892C0DA00600B685A1 /* Utils */,
@@ -477,16 +511,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E2EEDBE2C0DCAF40044AD67 /* BestEndpoint.swift in Sources */,
+				3E35C0532C1712D7007D399C /* BestBakery.swift in Sources */,
 				3EA3266C2BF4CBE40033927D /* ViewController.swift in Sources */,
 				3E2EEDCB2C0E18F60044AD67 /* BestBakeryDTO.swift in Sources */,
 				3ECB52932C0DC57B00B685A1 /* BestRepository.swift in Sources */,
 				3ECB528B2C0DA00E00B685A1 /* BundleAccessor.swift in Sources */,
+				3E35C0572C171313007D399C /* Certifications.swift in Sources */,
+				3E35C0592C17133E007D399C /* Regions.swift in Sources */,
 				3E35BF242C0F289D007D399C /* KeychainKey.swift in Sources */,
+				3E35C0452C12D967007D399C /* HomeUseCase.swift in Sources */,
 				3E2EEDCD2C0E197F0044AD67 /* BestReviewDTO.swift in Sources */,
 				3EA326682BF4CBE40033927D /* AppDelegate.swift in Sources */,
 				3EA3266A2BF4CBE40033927D /* SceneDelegate.swift in Sources */,
 				3E35BF282C1093AE007D399C /* KeychainError.swift in Sources */,
+				3E35C0552C1712F5007D399C /* BakeryOverview.swift in Sources */,
 				3E35BF222C0F2871007D399C /* KeychainService.swift in Sources */,
+				3E35C0482C12D9B4007D399C /* GBDomainError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

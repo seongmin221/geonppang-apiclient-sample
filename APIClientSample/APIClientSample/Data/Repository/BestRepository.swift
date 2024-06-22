@@ -10,21 +10,20 @@ import Foundation
 import GBNetwork
 
 protocol BestRepository {
-    func getBestBakeries() async throws -> Response<BestBakeryDTO>
-    func getBestReviews() async throws -> Response<BestReviewDTO>
+    func getBestBakeries() async throws -> Response<[BestBakeryDTO]>
+    func getBestReviews() async throws -> Response<[BestReviewDTO]>
 }
 
 final class BestRepositoryImpl: BestRepository {
     
     private let apiClient: APIClient<BestEndpoint> = .init()
-    private let keychainService: KeychainService = .init()
     
-    func getBestBakeries() async throws -> Response<BestBakeryDTO> {
+    func getBestBakeries() async throws -> Response<[BestBakeryDTO]> {
         let response = try await apiClient.send(.getBestBakeries)
         return try response.decode()
     }
     
-    func getBestReviews() async throws -> Response<BestReviewDTO> {
+    func getBestReviews() async throws -> Response<[BestReviewDTO]> {
         let response = try await apiClient.send(.getBestReviews)
         return try response.decode()
     }
