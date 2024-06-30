@@ -55,3 +55,9 @@ struct Pageable: Decodable {
 struct Sort: Decodable {
     let empty, sorted, unsorted: Bool
 }
+
+extension BakeryListDTO {
+    func toDomain() -> BakeryList {
+        return .init()
+    }
+}

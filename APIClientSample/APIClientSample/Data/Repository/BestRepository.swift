@@ -10,21 +10,22 @@ import Foundation
 import GBNetwork
 
 protocol BestRepository {
-    func getBestBakeries() async throws -> Response<[BestBakeryDTO]>
-    func getBestReviews() async throws -> Response<[BestReviewDTO]>
+//    func getBestBakeries() async throws -> [BestBakery]
+//    func getBestReviews() async throws -> [BestReviewDTO]
 }
-
+//
 final class BestRepositoryImpl: BestRepository {
-    
-    private let apiClient: APIClient<BestEndpoint> = .init()
-    
-    func getBestBakeries() async throws -> Response<[BestBakeryDTO]> {
-        let response = try await apiClient.send(.getBestBakeries)
-        return try response.decode()
-    }
-    
-    func getBestReviews() async throws -> Response<[BestReviewDTO]> {
-        let response = try await apiClient.send(.getBestReviews)
-        return try response.decode()
-    }
+//    
+//    private let apiClient: APIClient<BestEndpoint> = .init()
+//    
+//    func getBestBakeries() async throws -> [BestBakery] {
+//        let response = try await apiClient.send(.getBestBakeries)
+//        let dto = try response.decode()
+//        dto.data.toDomain()
+//    }
+//    
+//    func getBestReviews() async throws -> [BestReviewDTO] {
+//        let response = try await apiClient.send(.getBestReviews)
+//        return try response.decode()
+//    }
 }

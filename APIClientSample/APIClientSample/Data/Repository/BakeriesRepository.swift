@@ -9,17 +9,21 @@ import Foundation
 
 import GBNetwork
 
-protocol BakeriesRepository {
-    func getBakeryList(query: BakeryListRequestDTO) async throws -> Response<BakeryListDTO>
-}
-
 final class BakeriesRepositoryImpl: BakeriesRepository {
+    
+    typealias BakeryListResponse = Response<BakeryListDTO>
     
     private let apiClient: APIClient<BakeriesEndpoint> = .init()
     
-    func getBakeryList(query: BakeryListRequestDTO) async throws -> Response<BakeryListDTO> {
-        let query = query.toDictionary()
-        let response = try await apiClient.send(.getBakeryList(query: query))
-        return try response.decode()
+    func getBakeryList(query: BakeryListQuery) async throws -> BakeryList {
+        guard let response = try? await apiClient.send(.getBakeryList(query: query.toDictionary())) else {
+            throw GBNetworkError.unknownFailure(description: "")
+        }
+        
+        guard let dto = try? JSONDecoder().decode(BakeryListResponse.self, from: response.data) else {
+            throw GBNetworkError.decodingFailure(.dtoDecodingError)
+        }
+        
+        return dto.data.toDomain()
     }
 }

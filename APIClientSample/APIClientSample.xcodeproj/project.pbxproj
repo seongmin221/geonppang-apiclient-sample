@@ -13,8 +13,6 @@
 		3E35BF222C0F2871007D399C /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35BF212C0F2871007D399C /* KeychainService.swift */; };
 		3E35BF242C0F289D007D399C /* KeychainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35BF232C0F289D007D399C /* KeychainKey.swift */; };
 		3E35BF282C1093AE007D399C /* KeychainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35BF272C1093AE007D399C /* KeychainError.swift */; };
-		3E35C03E2C1216EF007D399C /* GBNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35C03A2C121645007D399C /* GBNetwork.framework */; };
-		3E35C03F2C1216EF007D399C /* GBNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E35C03A2C121645007D399C /* GBNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3E35C0452C12D967007D399C /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35C0442C12D967007D399C /* HomeUseCase.swift */; };
 		3E35C0482C12D9B4007D399C /* GBDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35C0472C12D9B4007D399C /* GBDomainError.swift */; };
 		3E35C0532C1712D7007D399C /* BestBakery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35C0522C1712D7007D399C /* BestBakery.swift */; };
@@ -25,6 +23,11 @@
 		3E3DEA122C26AA6000CA5999 /* BakeriesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DEA112C26AA6000CA5999 /* BakeriesEndpoint.swift */; };
 		3E3DEA142C26AB4F00CA5999 /* BakeriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DEA132C26AB4F00CA5999 /* BakeriesRepository.swift */; };
 		3E3DEA162C26AC3800CA5999 /* BakeryListRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DEA152C26AC3800CA5999 /* BakeryListRequestDTO.swift */; };
+		3E3DEACC2C307D7000CA5999 /* GBNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3DEAC92C307D6300CA5999 /* GBNetwork.framework */; };
+		3E3DEACD2C307D7000CA5999 /* GBNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3DEAC92C307D6300CA5999 /* GBNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3E3DEAD32C30E64400CA5999 /* BakeriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DEAD22C30E64400CA5999 /* BakeriesRepository.swift */; };
+		3E3DEAD52C30E65500CA5999 /* BakeryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DEAD42C30E65500CA5999 /* BakeryList.swift */; };
+		3E3DEAD82C30E68300CA5999 /* BakeryListQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3DEAD72C30E68300CA5999 /* BakeryListQuery.swift */; };
 		3EA326682BF4CBE40033927D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA326672BF4CBE40033927D /* AppDelegate.swift */; };
 		3EA3266A2BF4CBE40033927D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA326692BF4CBE40033927D /* SceneDelegate.swift */; };
 		3EA3266C2BF4CBE40033927D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA3266B2BF4CBE40033927D /* ViewController.swift */; };
@@ -39,18 +42,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3E35C0392C121645007D399C /* PBXContainerItemProxy */ = {
+		3E3DEAC82C307D6300CA5999 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3E35C0342C121645007D399C /* GBNetwork.xcodeproj */;
+			containerPortal = 3E3DEAC32C307D6300CA5999 /* GBNetwork.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 3E35BFD22C1195AD007D399C;
+			remoteGlobalIDString = 3E3DEA992C2FD32300CA5999;
 			remoteInfo = GBNetwork;
 		};
-		3E35C03B2C121645007D399C /* PBXContainerItemProxy */ = {
+		3E3DEACA2C307D6300CA5999 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3E35C0342C121645007D399C /* GBNetwork.xcodeproj */;
+			containerPortal = 3E3DEAC32C307D6300CA5999 /* GBNetwork.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 3E35BFDC2C1195AD007D399C;
+			remoteGlobalIDString = 3E3DEAA32C2FD32300CA5999;
 			remoteInfo = GBNetworkTests;
 		};
 		3EA3267B2BF4CBE60033927D /* PBXContainerItemProxy */ = {
@@ -76,7 +79,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3E35C03F2C1216EF007D399C /* GBNetwork.framework in Embed Frameworks */,
+				3E3DEACD2C307D7000CA5999 /* GBNetwork.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +93,6 @@
 		3E35BF212C0F2871007D399C /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		3E35BF232C0F289D007D399C /* KeychainKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKey.swift; sourceTree = "<group>"; };
 		3E35BF272C1093AE007D399C /* KeychainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainError.swift; sourceTree = "<group>"; };
-		3E35C0342C121645007D399C /* GBNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBNetwork.xcodeproj; path = "../../../gbnetwork-framework/GBNetwork/GBNetwork.xcodeproj"; sourceTree = "<group>"; };
 		3E35C0442C12D967007D399C /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		3E35C0472C12D9B4007D399C /* GBDomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBDomainError.swift; sourceTree = "<group>"; };
 		3E35C0522C1712D7007D399C /* BestBakery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestBakery.swift; sourceTree = "<group>"; };
@@ -101,6 +103,10 @@
 		3E3DEA112C26AA6000CA5999 /* BakeriesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeriesEndpoint.swift; sourceTree = "<group>"; };
 		3E3DEA132C26AB4F00CA5999 /* BakeriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeriesRepository.swift; sourceTree = "<group>"; };
 		3E3DEA152C26AC3800CA5999 /* BakeryListRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryListRequestDTO.swift; sourceTree = "<group>"; };
+		3E3DEAC32C307D6300CA5999 /* GBNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBNetwork.xcodeproj; path = ../../GBNetwork/GBNetwork.xcodeproj; sourceTree = "<group>"; };
+		3E3DEAD22C30E64400CA5999 /* BakeriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeriesRepository.swift; sourceTree = "<group>"; };
+		3E3DEAD42C30E65500CA5999 /* BakeryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryList.swift; sourceTree = "<group>"; };
+		3E3DEAD72C30E68300CA5999 /* BakeryListQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryListQuery.swift; sourceTree = "<group>"; };
 		3EA326642BF4CBE40033927D /* APIClientSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIClientSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA326672BF4CBE40033927D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EA326692BF4CBE40033927D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E35C03E2C1216EF007D399C /* GBNetwork.framework in Frameworks */,
+				3E3DEACC2C307D7000CA5999 /* GBNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +180,7 @@
 		3E2EEDC82C0E18ED0044AD67 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				3E3DEACF2C30E63400CA5999 /* Interface */,
 				3E2EEDC92C0E18EF0044AD67 /* Entity */,
 				3E35C0462C12D9A0007D399C /* Error */,
 				3E35C0432C12D92A007D399C /* UseCase */,
@@ -184,10 +191,12 @@
 		3E2EEDC92C0E18EF0044AD67 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				3E3DEAD62C30E67A00CA5999 /* Query */,
 				3E35C0522C1712D7007D399C /* BestBakery.swift */,
 				3E35C0542C1712F5007D399C /* BakeryOverview.swift */,
 				3E35C0562C171313007D399C /* Certifications.swift */,
 				3E35C0582C17133E007D399C /* Regions.swift */,
+				3E3DEAD42C30E65500CA5999 /* BakeryList.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -200,15 +209,6 @@
 				3E35BF272C1093AE007D399C /* KeychainError.swift */,
 			);
 			path = Keychain;
-			sourceTree = "<group>";
-		};
-		3E35C0352C121645007D399C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3E35C03A2C121645007D399C /* GBNetwork.framework */,
-				3E35C03C2C121645007D399C /* GBNetworkTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		3E35C03D2C1216EF007D399C /* Frameworks */ = {
@@ -234,10 +234,35 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		3E3DEAC42C307D6300CA5999 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E3DEAC92C307D6300CA5999 /* GBNetwork.framework */,
+				3E3DEACB2C307D6300CA5999 /* GBNetworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E3DEACF2C30E63400CA5999 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				3E3DEAD22C30E64400CA5999 /* BakeriesRepository.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		3E3DEAD62C30E67A00CA5999 /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				3E3DEAD72C30E68300CA5999 /* BakeryListQuery.swift */,
+			);
+			path = Query;
+			sourceTree = "<group>";
+		};
 		3EA3265B2BF4CBE40033927D = {
 			isa = PBXGroup;
 			children = (
-				3E35C0342C121645007D399C /* GBNetwork.xcodeproj */,
+				3E3DEAC32C307D6300CA5999 /* GBNetwork.xcodeproj */,
 				3EA326662BF4CBE40033927D /* APIClientSample */,
 				3EA3267D2BF4CBE60033927D /* APIClientSampleTests */,
 				3EA326872BF4CBE60033927D /* APIClientSampleUITests */,
@@ -460,8 +485,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 3E35C0352C121645007D399C /* Products */;
-					ProjectRef = 3E35C0342C121645007D399C /* GBNetwork.xcodeproj */;
+					ProductGroup = 3E3DEAC42C307D6300CA5999 /* Products */;
+					ProjectRef = 3E3DEAC32C307D6300CA5999 /* GBNetwork.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -474,18 +499,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		3E35C03A2C121645007D399C /* GBNetwork.framework */ = {
+		3E3DEAC92C307D6300CA5999 /* GBNetwork.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = GBNetwork.framework;
-			remoteRef = 3E35C0392C121645007D399C /* PBXContainerItemProxy */;
+			remoteRef = 3E3DEAC82C307D6300CA5999 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3E35C03C2C121645007D399C /* GBNetworkTests.xctest */ = {
+		3E3DEACB2C307D6300CA5999 /* GBNetworkTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = GBNetworkTests.xctest;
-			remoteRef = 3E35C03B2C121645007D399C /* PBXContainerItemProxy */;
+			remoteRef = 3E3DEACA2C307D6300CA5999 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -522,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E3DEAD82C30E68300CA5999 /* BakeryListQuery.swift in Sources */,
 				3E2EEDBE2C0DCAF40044AD67 /* BestEndpoint.swift in Sources */,
 				3E35C0532C1712D7007D399C /* BestBakery.swift in Sources */,
 				3E3DEA122C26AA6000CA5999 /* BakeriesEndpoint.swift in Sources */,
@@ -537,9 +563,11 @@
 				3E35C0452C12D967007D399C /* HomeUseCase.swift in Sources */,
 				3E2EEDCD2C0E197F0044AD67 /* BestReviewDTO.swift in Sources */,
 				3EA326682BF4CBE40033927D /* AppDelegate.swift in Sources */,
+				3E3DEAD32C30E64400CA5999 /* BakeriesRepository.swift in Sources */,
 				3EA3266A2BF4CBE40033927D /* SceneDelegate.swift in Sources */,
 				3E35BF282C1093AE007D399C /* KeychainError.swift in Sources */,
 				3E35C0552C1712F5007D399C /* BakeryOverview.swift in Sources */,
+				3E3DEAD52C30E65500CA5999 /* BakeryList.swift in Sources */,
 				3E3DEA162C26AC3800CA5999 /* BakeryListRequestDTO.swift in Sources */,
 				3E35BF222C0F2871007D399C /* KeychainService.swift in Sources */,
 				3E35C0482C12D9B4007D399C /* GBDomainError.swift in Sources */,

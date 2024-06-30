@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeUseCase {
-    func fetchBestBakeries()
+    func fetchBestBakeries() async throws -> [BestBakery]
     func fetchBestReviews()
 }
 
@@ -19,7 +19,10 @@ final class HomeUseCaseImpl: HomeUseCase {
         self.repository = repository
     }
     
-    func fetchBestBakeries() -> Void {
+    func fetchBestBakeries() async throws -> [BestBakery] {
+        return []
+//        let entity = try await repository.getBestBakeries()
+//        return entity
 //        Task {
 //            do {
 //                let dto = try await repository.getBestBakeries()
